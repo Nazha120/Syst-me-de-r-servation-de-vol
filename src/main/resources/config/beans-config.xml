@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+    
+    <bean id="aeroportDao" class="org.sid.vol.dao.impl.AeroportDaoImpl"></bean>
+    <bean id="aeroportMetier" class="org.sid.vol.metier.impl.AeroportMetierImpl">
+      <property name="dao" ref="aeroportDao"></property>
+    </bean>
+    
+     <bean id="clientDao" class="org.sid.vol.dao.impl.ClientDaoImpl"></bean>
+     <bean id="clientMetier" class="org.sid.vol.metier.impl.ClientMetierImpl">
+      <property name="dao" ref="clientDao"></property>
+     </bean>
+     
+     <bean id="compagnieADao" class="org.sid.vol.dao.impl.CompagnieADaoImpl"></bean>
+     <bean id="compagnieAMetier" class="org.sid.vol.metier.impl.CompagnieAMetierImpl">
+      <property name="dao" ref="compagnieADao"></property>
+     </bean>
+    
+     <bean id="escaleDao" class="org.sid.vol.dao.impl.EscaleDaoImpl"></bean>
+     <bean id="escaleMetier" class="org.sid.vol.metier.impl.EscaleMetierImpl">
+      <property name="dao" ref="escaleDao"></property>
+     </bean>
+     
+     <bean id="passagerDao" class="org.sid.vol.dao.impl.PassagerDaoImpl"></bean>
+     <bean id="passagerMetier" class="org.sid.vol.metier.impl.PassagerMetierImpl">
+      <property name="dao" ref="passagerDao"></property>
+     </bean>
+     
+      <bean id="reservationDao" class="org.sid.vol.dao.impl.ReservationDaoImpl"></bean>
+     <bean id="reservationMetier" class="org.sid.vol.metier.impl.ReservationMetierImpl">
+      <property name="dao" ref="reservationDao"></property>
+     </bean>
+     
+     <bean id="villeDao" class="org.sid.vol.dao.impl.VilleDaoImpl"></bean>
+     <bean id="villeMetier" class="org.sid.vol.metier.impl.VilleMetierImpl">
+      <property name="dao" ref="villeDao"></property>
+     </bean>
+     
+     <bean id="volDao" class="org.sid.vol.dao.impl.VolDaoImpl"></bean>
+     <bean id="volMetier" class="org.sid.vol.metier.impl.VolMetierImpl">
+      <property name="dao" ref="volDao"></property>
+     </bean>
+     
+</beans>    
